@@ -10,7 +10,7 @@ pygame.init()
 ANCHO_VENTANA = 800
 ALTO_VENTANA = 600
 pantalla = pygame.display.set_mode((ANCHO_VENTANA, ALTO_VENTANA))
-pygame.display.set_caption("Paso 2: Texto Centrado")
+pygame.display.set_caption("Paso 2: marco huanca")
 
 # Colores (RGB)
 COLOR_FONDO = (30, 40, 50)
