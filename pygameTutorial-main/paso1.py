@@ -16,7 +16,7 @@ ALTO_VENTANA = 600
 pantalla = pygame.display.set_mode((ANCHO_VENTANA, ALTO_VENTANA))
 
 # Colocamos un título a la ventana del sistema
-pygame.display.set_caption("Paso 1: Inicialización del Lienzo")
+pygame.display.set_caption("Paso 1: Paul Urteaga")
 
 # 3. Definimos los colores usando el formato numérico RGB (Red, Green, Blue)
 COLOR_FONDO = (30, 40, 50)  # Un azul grisáceo oscuro
