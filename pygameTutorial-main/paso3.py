@@ -16,7 +16,7 @@ COLOR_AMARILLO = (255, 215, 0)     # Cuadrado Amarillo (Gold)
 TAMANIO_CUADRADO = 150  # Lado del cuadrado en píxeles
 
 pantalla = pygame.display.set_mode((ANCHO_VENTANA, ALTO_VENTANA))
-pygame.display.set_caption("Paso 3: Cuadrado Amarillo Centrado")
+pygame.display.set_caption("Paso 3: Carlos Romero")
 
 # 1. Creamos el objeto rectangular con dimensiones (X, Y, Ancho, Alto)
 # Lo inicializamos temporalmente en el origen (0, 0)
