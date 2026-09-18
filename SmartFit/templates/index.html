@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GymFit PWA</title>
+    <link rel="manifest" href="/static/manifest.json">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f4f4f9; color: #333; }
+        .container { max-width: 500px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h2, h3 { color: #10b981; }
+        input, select, button { width: 100%; padding: 10px; margin: 8px 0; box-sizing: border-box; }
+        button { background: #10b981; color: white; border: none; font-weight: bold; cursor: pointer; border-radius: 4px; }
+        button:hover { background: #059669; }
+        .hidden { display: none; }
+        .routine-box, .client-card { background: #eef2ff; border-left: 4px solid #10b981; padding: 10px; margin-top: 10px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>GymFit</h2>
+
+        <!-- Login -->
+        <div id="login-section">
+            <h3>Iniciar Sesión</h3>
+            <input type="email" id="login-email" placeholder="Correo electrónico">
+            <input type="password" id="login-password" placeholder="Contraseña">
+            <button onclick="login()">Entrar</button>
+            <p>¿No tienes cuenta? <a href="#" onclick="toggleView('register')">Regístrate</a></p>
+        </div>
+
+        <!-- Registro -->
+        <div id="register-section" class="hidden">
+            <h3>Registro</h3>
+            <input type="text" id="reg-nombre" placeholder="Nombre">
+            <input type="text" id="reg-apellido" placeholder="Apellido">
+            <input type="email" id="reg-email" placeholder="Correo">
+            <input type="password" id="reg-password" placeholder="Contraseña">
+            <input type="number" id="reg-edad" placeholder="Edad">
+            <button onclick="registrar()">Crear Cuenta</button>
+            <p>¿Ya tienes cuenta? <a href="#" onclick="toggleView('login')">Inicia sesión</a></p>
+        </div>
+
+        <!-- Panel del Cliente -->
+        <div id="user-section" class="hidden">
+            <h3 id="welcome-msg"></h3>
+            
+            <label><strong>1. Elige tu objetivo:</strong></label>
+            <select id="select-objetivo">
+                <option value="">-- Seleccionar --</option>
+                <option value="Bajar de peso">Bajar de peso</option>
+                <option value="Aumentar masa muscular">Aumentar masa muscular</option>
+            </select>
+
+            <label><strong>2. Elige tu nivel:</strong></label>
+            <select id="select-nivel">
+                <option value="">-- Seleccionar --</option>
+                <option value="Fácil">Fácil (Poca experiencia)</option>
+                <option value="Básico">Básico (Experiencia previa)</option>
+                <option value="Avanzado">Avanzado (Entreno regular)</option>
+            </select>
+
+            <button onclick="guardarPreferencias()">Guardar Configuración</button>
+            <button onclick="mostrarRutina()" style="background: #3b82f6;">Ver Mi Rutina</button>
+
+            <div id="routine-container" class="routine-box hidden"></div>
+
+            <button onclick="logout()" style="background: #ef4444; margin-top: 20px;">Cerrar Sesión</button>
+        </div>
+
+        <!-- Panel del Entrenador -->
+        <div id="trainer-section" class="hidden">
+            <h3>Panel del Entrenador</h3>
+            <div id="trainer-clients-list"></div>
+            <button onclick="logout()" style="background: #ef4444; margin-top: 20px;">Cerrar Sesión</button>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

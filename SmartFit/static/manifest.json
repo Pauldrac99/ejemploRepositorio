@@ -1,0 +1,9 @@
+{
+  "name": "GymFit App",
+  "short_name": "GymFit",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#10b981",
+  "icons": []
+}
